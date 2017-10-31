@@ -2,5 +2,5 @@
 
 RUN mkdir /backup
 
-COPY files/start.sh /opt/start.sh
+COPY start.sh /opt/start.sh
 RUN chmod +x /opt/start.sh
