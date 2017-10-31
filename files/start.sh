@@ -1,7 +1,7 @@
 #!/bin/bash
-wget "http://hndl.urbackup.org/Client/2.0.31/UrBackup%20Client%20Linux%202.0.31.sh" -O urbtemp
-echo yes 4 | bash urbtemp
+wget "http://hndl.urbackup.org/Client/${urbversion}/UrBackup%20Client%20Linux%20${urbversion}.sh" -O urbtemp
+yes 4 | sh urbtemp
 rm urbtemp
+service urbackupclientbackend restart
 
-urbackupclientbackend -d
 urbackupclientctl add-backupdir -d /backup
