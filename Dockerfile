@@ -5,5 +5,5 @@ RUN apt-get update && apt-get install -y wget
 RUN wget "http://hndl.urbackup.org/Client/2.0.31/UrBackup%20Client%20Linux%202.0.31.sh" -O mktemp
 RUN yes 4 | sh mktemp
 RUN rm mktemp
-RUN urbackupclientbackend -d
-RUN urbackupclientctl add-backupdir -d /backup
+COPY files/start.sh /opt/start.sh
+RUN chmod 755 /opt/start.sh
