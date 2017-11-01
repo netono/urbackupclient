@@ -3,6 +3,6 @@ wget "http://hndl.urbackup.org/Client/${urbversion}/UrBackup%20Client%20Linux%20
 
 yes 4 | sh urbtemp
 
-/etc/init.d/urbackupclientbackend stop
+kill -9 $(pidof urbackupclientbackend)
 
 urbackupclientbackend
