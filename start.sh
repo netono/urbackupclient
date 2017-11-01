@@ -3,4 +3,6 @@ wget "http://hndl.urbackup.org/Client/${urbversion}/UrBackup%20Client%20Linux%20
 
 yes 4 | sh urbtemp
 
+service urbackupclientbackend stop
+
 urbackupclientbackend
