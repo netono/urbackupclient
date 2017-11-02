@@ -5,6 +5,7 @@ yes 4 | sh urbtemp
 
 kill -9 $(pidof urbackupclientbackend)
 rm -f /etc/init.d/urbackupclientbackend
-/bin/cp -rf /opt/urbackupclient /etc/default
+unalias cp
+cp -rf /opt/urbackupclient /etc/default
 
 urbackupclientbackend
